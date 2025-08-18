@@ -29,19 +29,18 @@ The problems are organized by topic for easy navigation:
 ---
 
 ## 📈 Progress Tracking
-✅ Problems Solved: 9
+✅ Problems Solved: 9 
 📅 Started: *Aug 2025*  
 🕒 Last Updated: *17Aug 2025*  
 
 ---
 
-✨ Example Problem Format
+## ✨ Example Problem Format
 Each solution file includes:
 1. Problem statement (in comments)
-2. Approach / Explanation
-3. Code implementation
+2. Code implementation
 
-Example:
+##Example:
 ```java
 /**
  * Problem: Two Sum (LeetCode 1)

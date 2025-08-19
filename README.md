@@ -29,9 +29,9 @@ The problems are organized by topic for easy navigation:
 ---
 
 ## 📈 Progress Tracking
-✅ Problems Solved: 9 
+✅ Problems Solved: *10*  
 📅 Started: *Aug 2025*  
-🕒 Last Updated: *17Aug 2025*  
+🕒 Last Updated: *19Aug 2025*  
 
 ---
 
@@ -45,7 +45,6 @@ Each solution file includes:
 /**
  * Problem: Two Sum (LeetCode 1)
  * Link: https://leetcode.com/problems/two-sum/
- * Approach: Use HashMap to store indices and check complement in O(n).
  */
 class Solution {
     public int[] twoSum(int[] nums, int target) {

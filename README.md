@@ -29,9 +29,9 @@ The problems are organized by topic for easy navigation:
 ---
 
 ## 📈 Progress Tracking
-✅ Problems Solved: *10*  
+✅ Problems Solved: **  
 📅 Started: *Aug 2025*  
-🕒 Last Updated: *19Aug 2025*  
+🕒 Updated: *Daily*  
 
 ---
 
@@ -45,6 +45,7 @@ Each solution file includes:
 /**
  * Problem: Two Sum (LeetCode 1)
  * Link: https://leetcode.com/problems/two-sum/
+ * Level: Easy
  */
 class Solution {
     public int[] twoSum(int[] nums, int target) {

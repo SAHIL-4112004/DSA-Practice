@@ -1,0 +1,120 @@
+Problem Summary :-    Chef considers a word hard to pronounce if it contains at least 4 consecutive consonants.
+                      Consonants = all alphabets except a, e, i, o, u
+                      If any substring of the word contains 4 or more consonants in a row, the answer is "Yes"
+                      Otherwise, the word is "No"
+
+Input Format :- 
+                      First line contains T — number of test cases
+                      For each test case:
+                      An integer N — length of the string
+                      A lowercase string S of length N
+
+Output Format :- 
+                      For each test case, print:
+                      Yes — if the word is hard to pronounce
+                      No — otherwise
+                      (Any letter case is accepted)
+
+Constraints :-
+                      1≤T≤100
+                      1≤N≤100
+                      S consists only of lowercase English letters
+
+Approach :-
+                      We scan the string from left to right and maintain a counter:
+
+Algorithm :-
+                      Initialize count = 0
+                      For each character:
+                      If it is a consonant → count++
+                      If it is a vowel → reset count = 0
+                      If at any point count >= 4, we mark the word as hard
+                      Print Yes or No accordingly
+                      
+                      This approach is O(N) per test case and works efficiently within constraints.
+
+Pseudocode :- 
+                      for each test case:
+                          read N
+                          read S
+                          count = 0
+                          hard = false
+                      
+                          for each character c in S:
+                              if c is consonant:
+                                  count++
+                                  if count >= 4:
+                                      hard = true
+                                      stop checking further
+                              else:
+                                  count = 0
+                      
+                          print "Yes" if hard else "No"
+
+Time & Space Complexity :- 
+                          Time Complexity: O(N) per test case
+                          Space Complexity: O(1)
+
+Sample Input
+                          6
+                          6
+                          syzygy
+                          3
+                          cry
+                          9
+                          locksmith
+                          6
+                          scream
+                          7
+                          aqueous
+                          9
+                          worldview
+
+Sample Output :- 
+                          Yes
+                          No
+                          Yes
+                          No
+                          No
+                          Yes
+
+Java Solution (Cleaned + Commented) :- 
+                          import java.util.*;
+                          import java.lang.*;
+                          import java.io.*;
+                          
+                          class Codechef {
+                              public static void main (String[] args) throws java.lang.Exception {
+                                  
+                                  Scanner sc = new Scanner(System.in);
+                                  int T = sc.nextInt();   // Number of test cases
+                                  
+                                  while (T-- > 0) {
+                                      int n = sc.nextInt();  // Length of the word
+                                      String S = sc.next();  // The word
+                                      
+                                      int count = 0;         // To count consecutive consonants
+                                      boolean hard = false;  // Flag to mark if word is hard
+                                      
+                                      for (int i = 0; i < n; i++) {
+                                          char c = S.charAt(i);
+                                          
+                                          // Check if character is consonant
+                                          if ("aeiou".indexOf(c) == -1) {
+                                              count++;
+                                              
+                                              // If 4 consecutive consonants found
+                                              if (count >= 4) {
+                                                  hard = true;
+                                                  break;
+                                              }
+                                          } else {
+                                              // Reset count on encountering vowel
+                                              count = 0;
+                                          }
+                                      }
+                                      
+                                      System.out.println(hard ? "Yes" : "No");
+                                  }
+                              }
+}
